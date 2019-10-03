@@ -16,7 +16,7 @@ Demasiada responsabilidad de la clase Game, se encarga de limpiar, decidir si el
 Algunos smell codes y código muerto (método 'clear()' en clase 'IO')
 
 ### Problema 6
-No respeta el principio kiss, innecesaria herencia de Command en el paquete utils con Command en el paquete menú.
+No respeta el principio kiss, innecesaria herencia de Command en el paquete utils con Command en el paquete menú. Además existía una mala utilización de los nombres (ambos Command).
 > Solución: Eliminamos la herencia y hacemos directamente la dependencia de Command con menú.
 
 
