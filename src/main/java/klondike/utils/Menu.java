@@ -19,16 +19,17 @@ public abstract class Menu {
         boolean error;
         int option;
         do {
+            IO io = new IO();
             error = false;
             for (int i = 0; i < commands.size(); i++) {
-                IO.writeln((i + 1) + ") " + commands.get(i).getTitle());
+                io.writeln((i + 1) + ") " + commands.get(i).getTitle());
             }
-            IO.write(OPTION);
-            option = IO.readInt("") - 1;
+            io.write(OPTION);
+            option = io.readInt("") - 1;
             if (!new ClosedInterval(0, commands.size() - 1).includes(option)) {
                 error = true;
             }
-            IO.writeln();
+            io.writeln();
         } while (error);
         commands.get(option).execute();
     }

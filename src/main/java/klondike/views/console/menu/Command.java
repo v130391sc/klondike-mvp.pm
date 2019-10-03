@@ -17,7 +17,8 @@ public abstract class Command extends klondike.utils.Command {
     protected void execute() {
         Error error = this.move();
         if (error != null) {
-            IO.writeError(Message.INVALID_MOVE, error.getMessage());
+            IO io = new IO();
+            io.writeError(Message.INVALID_MOVE, error.getMessage());
         }
     }
 

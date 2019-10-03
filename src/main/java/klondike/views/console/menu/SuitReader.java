@@ -6,7 +6,8 @@ import klondike.utils.IO;
 public class SuitReader {
 
     public static Suit read() {
-        char initial = IO.readChar(Message.READ_SUIT, Suit.initials());
+        IO io = new IO();
+        char initial = io.readChar(Message.READ_SUIT, Suit.initials());
         return Suit.find(initial);
     }
 }

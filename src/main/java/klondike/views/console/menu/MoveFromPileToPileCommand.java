@@ -13,9 +13,10 @@ public class MoveFromPileToPileCommand extends Command {
 
     @Override
     protected Error move() {
+        IO io = new IO();
         int originIndex = PileReader.readIndex(Message.ORIGIN);
         int destinationIndex = PileReader.readIndex(Message.DESTINATION);
-        int numberOfCards = IO.readInt(Message.READ_NUMBER_OF_CARDS, new ClosedInterval(1, 13));
+        int numberOfCards = io.readInt(Message.READ_NUMBER_OF_CARDS, new ClosedInterval(1, 13));
         return this.moveController.moveFromPileToPile(originIndex, destinationIndex, numberOfCards);
     }
 }

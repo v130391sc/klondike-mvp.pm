@@ -16,9 +16,10 @@ public abstract class CardStackView {
     }
 
     protected void writeln(Card card) {
-        IO.write(title);
+        IO io = new IO();
+        io.write(title);
         if (card == null)
-            IO.writeln(Message.EMPTY);
+            io.writeln(Message.EMPTY);
         else
             new CardView(card).writeln();
     }
