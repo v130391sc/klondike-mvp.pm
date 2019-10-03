@@ -13,3 +13,4 @@ Problema de unica responsabilidad en IO (lee y escribe), además depende directa
 Demasiada responsabilidad de la clase Game, se encarga de limpiar, decidir si el juego ha terminado, mover cartas, etc.
 >Solución: No he conseguido llegar a una solución óptima.
 
+**RAMA MASTER (Original mvp-pm) - RAMA DEVELOP (Modificaciones)**
