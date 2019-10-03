@@ -1,31 +1,15 @@
-## Práctica ecosistema [Sergio Cabrero Fernández]
-> Configuración de un entorno automatizado de trabajo (Control de versiones, Integración continua, control de calidad de código, despliegue, etc.)
+## IWVG. EF. Trabajo práctico: DOO [Sergio Cabrero Fernández]
+> Problemas y mejoras al proyecto de Irati Casi Klondike
+### Problema 1
+**Principio de única responsabilidad** en MoveController: Indicaba si había finalizado el juego, de esta manera tenía dos responsabilidades, los movimientos y la finalización del juego. 
+>Solución: Creamos FinishController y le asignamos la responsabilidad de todos los temas de finalizar el juego.
+###Problema 2
+Strings asignados directamente en código en la clase IO, sin uso de constantes para asignarlos.
+>Solución: Creamos variables globales y les asignamos las constantes, provocando legibilidad en el código.
+###Problema 3
+Problema de unica responsabilidad en IO (lee y escribe), además depende directamente de librerías de terceros, sin encapsulación.
+>Solución: Creamos interfaces Reader y Writer para cambiar la librería de lectura escritura basándonos en la ley del cambio continuo. Así, cambiar la librería con la que lee o escribe afectaría minimamente.
+###Problema 4
+Demasiada responsabilidad de la clase Game, se encarga de limpiar, decidir si el juego ha terminado, mover cartas, etc.
+>Solución: No he conseguido llegar a una solución óptima.
 
-[![GitHub](https://img.shields.io/github/license/v130391sc/iwvg-ecosystem-sergio-cabrero?color=informational)](https://github.com/v130391sc/iwvg-ecosystem-sergio-cabrero/blob/master/LICENSE.md)
-[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/v130391sc/iwvg-ecosystem-sergio-cabrero?color=informational)](https://github.com/v130391sc/iwvg-ecosystem-sergio-cabrero/releases)
-![GitHub Release Date](https://img.shields.io/github/release-date/v130391sc/iwvg-ecosystem-sergio-cabrero?color=informational)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/v130391sc/iwvg-ecosystem-sergio-cabrero)
-![GitHub issues](https://img.shields.io/github/issues/v130391sc/iwvg-ecosystem-sergio-cabrero?color=important)
-![GitHub closed issues](https://img.shields.io/github/issues-closed/v130391sc/iwvg-ecosystem-sergio-cabrero?color=informational)
-
-##Estado del código
-
-[![Build Status](https://travis-ci.org/v130391sc/iwvg-ecosystem-sergio-cabrero.svg?branch=develop)](https://travis-ci.org/v130391sc/iwvg-ecosystem-sergio-cabrero)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=es.upm.miw%3Aiwvg-ecosystem-sergio-cabrero&metric=alert_status)](https://sonarcloud.io/dashboard?id=es.upm.miw%3Aiwvg-ecosystem-sergio-cabrero)
-[![BCH compliance](https://bettercodehub.com/edge/badge/v130391sc/iwvg-ecosystem-sergio-cabrero?branch=develop)](https://bettercodehub.com/)
-[![Heroku broken](https://iwvg-ecosystem-sergio-cabrero.herokuapp.com/system/version-badge)](https://iwvg-ecosystem-sergio-cabrero.herokuapp.com/swagger-ui.html)
-
-
-### Ecosistema
-* Java
-* Maven
-* Logs
-* JUnit5
-* IntelliJ
-* GitHub
-* Travis-CI
-* Sonar Cloud
-* Better Code Hub
-* Spring
-* Heroku
-* OpenAPI-Swagger
