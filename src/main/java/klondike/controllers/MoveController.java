@@ -37,8 +37,4 @@ public class MoveController extends Controller {
     public Error moveFromWasteToStock() {
         return this.game.moveFromWasteToStock();
     }
-
-    public boolean isGameFinished() {
-        return this.game.isFinished();
-    }
 }

@@ -1,5 +1,6 @@
 package klondike;
 
+import klondike.controllers.FinishController;
 import klondike.controllers.MoveController;
 import klondike.controllers.ResumeController;
 import klondike.controllers.StartController;
@@ -12,6 +13,7 @@ public class Klondike {
     private final StartController startController;
     private final MoveController moveController;
     private final ResumeController resumeController;
+    private final FinishController finishController;
     private View view;
     private Game game;
 
@@ -20,7 +22,8 @@ public class Klondike {
         this.startController = new StartController(this.game);
         this.moveController = new MoveController(this.game);
         this.resumeController = new ResumeController(this.game);
-        this.view = new ConsoleView(startController, moveController, resumeController);
+        this.finishController = new FinishController(this.game);
+        this.view = new ConsoleView(startController, moveController, resumeController, finishController);
     }
 
     public static void main(String[] args) {

@@ -1,5 +1,6 @@
 package klondike.views.console;
 
+import klondike.controllers.FinishController;
 import klondike.controllers.MoveController;
 import klondike.controllers.ResumeController;
 import klondike.controllers.StartController;
@@ -11,8 +12,8 @@ public class ConsoleView extends View {
 
     private PlayMenu playMenu;
 
-    public ConsoleView(StartController startController, MoveController moveController, ResumeController resumeController) {
-        super(startController, moveController, resumeController);
+    public ConsoleView(StartController startController, MoveController moveController, ResumeController resumeController, FinishController finishController) {
+        super(startController, moveController, resumeController, finishController);
         this.playMenu = new PlayMenu(this.moveController);
     }
 
