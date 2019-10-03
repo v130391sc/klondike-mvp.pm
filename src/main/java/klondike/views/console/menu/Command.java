@@ -4,17 +4,18 @@ import klondike.controllers.MoveController;
 import klondike.models.Error;
 import klondike.utils.IO;
 
-public abstract class Command extends klondike.utils.Command {
+public abstract class Command {
 
     protected MoveController moveController;
 
+    private String title;
+
     protected Command(String title, MoveController moveController) {
-        super(title);
+        this.title = title;
         this.moveController = moveController;
     }
 
-    @Override
-    protected void execute() {
+    public void execute() {
         Error error = this.move();
         if (error != null) {
             IO io = new IO();
@@ -23,4 +24,8 @@ public abstract class Command extends klondike.utils.Command {
     }
 
     protected abstract Error move();
+
+    public String getTitle() {
+        return this.title;
+    }
 }

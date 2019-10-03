@@ -12,5 +12,12 @@ Problema de unica responsabilidad en IO (lee y escribe), además depende directa
 ### Problema 4
 Demasiada responsabilidad de la clase Game, se encarga de limpiar, decidir si el juego ha terminado, mover cartas, etc.
 > Solución: No he conseguido llegar a una solución óptima.
+### Problema 5
+Algunos smell codes y código muerto (método 'clear()' en clase 'IO')
+
+### Problema 6
+No respeta el principio kiss, innecesaria herencia de Command en el paquete utils con Command en el paquete menú.
+> Solución: Eliminamos la herencia y hacemos directamente la dependencia de Command con menú.
+
 
 **RAMA MASTER (Original mvp-pm) - RAMA DEVELOP (Modificaciones)**

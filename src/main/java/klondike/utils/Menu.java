@@ -1,5 +1,7 @@
 package klondike.utils;
 
+import klondike.views.console.menu.Command;
+
 import java.util.ArrayList;
 
 public abstract class Menu {
