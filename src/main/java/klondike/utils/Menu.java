@@ -8,11 +8,11 @@ public abstract class Menu {
     private ArrayList<Command> commandList;
 
     public Menu() {
-        this.commandList = new ArrayList<Command>();
+        this.commandList = new ArrayList<>();
     }
 
     public void execute() {
-        ArrayList<Command> commands = new ArrayList<Command>();
+        ArrayList<Command> commands = new ArrayList<>();
         for (int i = 0; i < this.commandList.size(); i++) {
             commands.add(this.commandList.get(i));
         }

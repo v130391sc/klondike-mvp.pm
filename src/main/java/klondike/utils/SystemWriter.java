@@ -14,8 +14,4 @@ public class SystemWriter implements Writer {
         System.out.println(string);
     }
 
-    public void clear() {
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
 }

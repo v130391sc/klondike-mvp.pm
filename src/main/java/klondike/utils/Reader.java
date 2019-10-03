@@ -4,6 +4,6 @@ import java.io.IOException;
 
 public interface Reader {
 
-    public String read() throws IOException;
+    String read() throws IOException;
 
 }

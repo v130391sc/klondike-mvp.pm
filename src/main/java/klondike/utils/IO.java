@@ -1,8 +1,6 @@
 package klondike.utils;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
 public class IO {
 
@@ -85,6 +83,7 @@ public class IO {
         do {
             String input = readString(title);
             if (input.length() != 1) {
+                writeFormatError(CHARACTER);
             } else {
                 charValue = input.charAt(0);
                 ok = (new String(options).indexOf(charValue) != -1);
